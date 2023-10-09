@@ -8,3 +8,4 @@ Welcome to my bevy game
 - [Bevy Api](https://docs.rs/bevy/latest/bevy/)
 - [YouTube Tutorial series by 'Logic Projects'](https://www.youtube.com/watch?v=VSnhfm00Vz4&list=PLT_D88-MTFOPPl75g4WshL1Gx2bnGTUkz)
 - [Bevy Examples github](https://github.com/bevyengine/bevy/tree/main/examples)
+- [Bevy egui github](https://github.com/mvlabat/bevy_egui)
