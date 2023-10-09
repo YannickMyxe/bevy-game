@@ -35,7 +35,7 @@ fn spawn_camera(mut commands: Commands) {
         transform: Transform::from_xyz(-2., 2.5, 5.0)
             .looking_at(Vec3::ZERO, Vec3::Y),
             ..default()
-    });
+    }).insert(Name::new("main_camera"));
 }
 
 
@@ -45,20 +45,20 @@ fn spawn_basic_scene(mut commands: Commands, mut meshes: ResMut<Assets<Mesh>>, m
         mesh: meshes.add(Mesh::from(shape::Plane{ size: 5.0, ..default() })),
         material: materials.add(Color::rgb(0.184, 0.678, 0.235).into()),
         ..default()
-    });
+    }).insert(Name::new("Plane"));
     // Create a Cube
     commands.spawn(PbrBundle {
         mesh: meshes.add(Mesh::from(shape::Cube{ size: 1.0 })),
         material: materials.add(Color::rgb(0.675, 0.506, 0.929).into()),
         transform: Transform::from_xyz(0., 0.5, 0.),
         ..default()
-    });
+    }).insert(Name::new("Cube-01"));
     // Create a Light source
     commands.spawn( PointLightBundle {
         point_light: PointLight { intensity: 1500.0,  shadows_enabled: true,  ..default() },
         transform: Transform::from_xyz(4., 8., 4.),
         ..default()
-    });
+    }).insert(Name::new("main_light"));
 }
 
 pub struct BasicScenePlug;
